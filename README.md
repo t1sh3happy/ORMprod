@@ -77,9 +77,10 @@ mvn test
 
 В проекте есть Dockerfile и docker-compose.yml для быстрого развёртывания с PostgreSQL:
 
-- Собрать образ:
-docker build -t ormprod-app .
+1. Соберите jar-файл:
+   mvn clean package
 
+2. Запустите весь проект и PostgreSQL:
+   docker-compose up
 
-- Запустить с PostgreSQL:
-docker-compose up
+3. Приложение будет доступно на порту 8080, база — на 5432.
